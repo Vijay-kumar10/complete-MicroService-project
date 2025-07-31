@@ -32,7 +32,8 @@ public class  UserController {
     //get single user
     @GetMapping("/{userId}")
 //    @CircuitBreaker(name = "hotelRatingBreaker",fallbackMethod = "ratingHotelFallBack")
-    @Retry(name = "hotelRatingRetryBreaker",fallbackMethod = "ratingHotelFallBack")
+//    @Retry(name = "hotelRatingRetryBreaker",fallbackMethod = "ratingHotelFallBack")
+    @RateLimiter(name = "hotelRatingRateLimiter",fallbackMethod = "ratingHotelFallBack")
 
     public ResponseEntity<User> getUser(@PathVariable String userId ){
         System.out.println("Retry count : " + retryCount++);
