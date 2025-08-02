@@ -37,10 +37,15 @@
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-gateway -->
-        <dependency>
-                <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-gateway</artifactId>
-        </dependency>
+<!--                 <dependency> -->
+<!--                         <groupId>org.springframework.cloud</groupId> -->
+<!--                     <artifactId>spring-cloud-starter-gateway</artifactId> -->
+<!--                 </dependency> -->
+
+       <dependency>
+           <groupId>org.springframework.cloud</groupId>
+           <artifactId>spring-cloud-starter-gateway-server-webflux</artifactId>
+       </dependency>
 
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -73,6 +78,7 @@
              <groupId>org.springframework.boot</groupId>
              <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
+
           <dependency>
               <groupId>org.projectlombok</groupId>
               <artifactId>lombok</artifactId>
